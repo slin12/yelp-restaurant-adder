@@ -10,10 +10,15 @@ class RestaurantsController < ApplicationController
   def create
     restaurant_params.each do |rest_name, value|
       rest = Restaurant.cache.find {|rest| rest.name == rest_name}
-      current_user.restaurants << rest
-      rest.save
+      if Restaurant.find_by(name: rest.name, city: rest.city)
+        current_user.restaurants << Restaurant.find_by(name: rest.name, city: rest.city)
+      else
+        current_user.restaurants << rest
+        rest.save
+      end
     end
     Restaurant.cache.clear
+    flash[:notice] = "You've succesfully added restaurants."
     redirect_to restaurants_path
   end
 
