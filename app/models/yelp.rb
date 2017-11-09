@@ -15,7 +15,7 @@ GRANT_TYPE = "client_credentials"
 DEFAULT_BUSINESS_ID = "yelp-san-francisco"
 DEFAULT_TERM = "dinner"
 DEFAULT_LOCATION = "San Francisco, CA"
-SEARCH_LIMIT = 5
+SEARCH_LIMIT = 9
 
 
 class Yelp

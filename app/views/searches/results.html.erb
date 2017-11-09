@@ -4,7 +4,7 @@
   <div class="row">
     <%= form_tag '/restaurants' do %>
       <% @array.each do |rest| %>
-      <div class="col s5">
+      <div class="col s4">
         <h5 class="teal-text lighten-3"><%= rest.name %></h3>
         <p>Phone Number: <%= rest.phone %></p>
         <p>Rating: <%= rest.rating %></p>
