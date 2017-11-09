@@ -29,6 +29,14 @@
       </ul>
     </div>
   </nav>
+
+    <% if flash[:notice] %>
+    <div class="row center flash-notice grey-text">
+      <p><%= flash[:notice] %></p>
+    </div>
+    <% end %>
+
     <%= yield %>
+
   </body>
 </html>

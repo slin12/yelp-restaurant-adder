@@ -23,5 +23,9 @@
 }
 
 .container {
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
+}
+
+.flash-notice {
+  font-size: 12px; 
 }
