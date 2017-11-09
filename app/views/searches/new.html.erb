@@ -1,0 +1,16 @@
+<div class="container">
+
+<h3 class="center pink-text text-lighten-3">Find Restaurants</h3>
+
+<%= form_tag '/results' do %>
+  <%= label_tag 'type', "What Are You Looking For?" %>
+  <%= text_field_tag 'type' %><br><br>
+
+  <%= label_tag 'location', "Where Are You Looking?" %>
+  <%= text_field_tag 'location' %><br><br>
+
+  <%= submit_tag "Search", class: "waves-effect waves-light btn pink lighten-3" %>
+
+<% end %>
+
+</div>

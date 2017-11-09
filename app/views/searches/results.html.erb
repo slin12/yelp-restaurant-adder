@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h3 class="center">Here's What We Found:</h3>
+  <div class="row">
+    <%= form_tag '/restaurants' do %>
+      <% @array.each do |rest| %>
+      <div class="col s5">
+        <h5 class="teal-text lighten-3"><%= rest.name %></h3>
+        <p>Phone Number: <%= rest.phone %></p>
+        <p>Rating: <%= rest.rating %></p>
+        <p>City: <%= rest.city %></p>
+
+        <input type="checkbox" id="<%= "restaurants[#{rest.name}]" %>" name="<%= "restaurants[#{rest.name}]" %>" value="1"/>
+        <label for="<%= "restaurants[#{rest.name}]" %>">Select</label>
+
+        <br><br>
+      </div>
+      <% end %>
+  </div>
+    <%= submit_tag "Add", class: "waves-effect waves-light btn pink lighten-3" %>
+  <% end %>
+
+</div>
