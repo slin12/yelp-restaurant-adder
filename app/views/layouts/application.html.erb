@@ -12,6 +12,11 @@
   <body>
     <nav class="teal lighten-2">
     <div class="nav-wrapper">
+      <% if !logged_in? %>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li class="name teal-text text-lighten-4">Restaurant Adder</li>
+        </ul>
+      <% end %>
       <% if logged_in? %>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li class="name teal-text text-lighten-4">Welcome, <%= current_user.name %></li>
