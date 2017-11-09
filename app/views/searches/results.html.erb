@@ -11,7 +11,7 @@
           <p>Phone Number: <%= rest.phone %></p>
           <p>Rating: <%= rest.rating %></p>
           <p>City: <%= rest.city %></p>
-          <input type="checkbox" id="<%= "restaurants[#{rest.name}]" %>" value="1"/>
+          <input type="checkbox" id="<%= "restaurants[#{rest.name}]" %>" name="<%= "restaurants[#{rest.name}]" %>" value="1"/>
           <label for="<%= "restaurants[#{rest.name}]" %>">Select</label>
         </div>
       <% end %>
