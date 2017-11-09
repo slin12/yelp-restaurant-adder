@@ -1,4 +1,4 @@
-# README
+# Restaurant Adder
 
 A simple rails add that shows:
 
