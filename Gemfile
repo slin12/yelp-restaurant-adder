@@ -8,8 +8,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use Puma as the app server
-gem 'sqlite3', group: :development # Added development group.
-gem 'pg', group: :production # Added postgres and made it production only.
+gem 'pg'
 gem 'rails_12factor'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
