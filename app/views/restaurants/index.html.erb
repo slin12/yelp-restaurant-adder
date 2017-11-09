@@ -2,14 +2,21 @@
 <div class="container">
 
   <h3 class="center pink-text text-lighten-3">Your Restaurants</h3>
-    <div class="row">
-      <% @restaurants.each do |rest| %>
-      <div class="col s5 center">
-        <h5 class="teal-text lighten-3"><%= rest.name %></h5>
-        <p>Phone Number: <%= rest.phone %></p>
-        <p>Rating: <%= rest.rating %></p>
-        <p>City: <%= rest.city %></p>
+    <% if !@restaurants.empty? %>
+      <div class="row">
+        <% @restaurants.each do |rest| %>
+        <div class="col s5 center">
+          <h5 class="teal-text lighten-3"><%= rest.name %></h5>
+          <p>Phone Number: <%= rest.phone %></p>
+          <p>Rating: <%= rest.rating %></p>
+          <p>City: <%= rest.city %></p>
+        </div>
+      <% end %>
+      </div>
+    <% else %>
+      <div class="row center">
+          <h6>You have no restaurants!</h6>
+          <%= link_to "Add Restaurants", search_path %>
       </div>
     <% end %>
-    </div>
 </div>
